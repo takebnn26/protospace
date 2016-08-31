@@ -1,53 +1,55 @@
 #protospace
 
 ##Description of DB
+
+1. User model  
+	1. Association  
+	  User has many Projects and Comments.  
+	
+	2. Table  
+	  Users table  
+	
+	3. Columns and types of columns  
+		name     :  string  
+		group    :  string  
+		profile  :  text  
+		work     :  string  
+	
+2. Prototype model  
+	1. Association  
+	  Prototype belongs to User and has many Comemnts and Images.  
+	
+	2. Table  
+	  Prototypes table
+	
+	3. Columns and types of columns  
+	  title        :  string  
+  	  catch\_copy  :  string  
+  	  concept      :  text  
+  	  user\_id     :  integer  
+	
+3. Comment model  
+	1. Association  
+	  Comment belongs to Prototype and User.  
+	
+	2. Table  
+	  Comments table
+	
+	3. Columns and types of columns  
+	  user\_id     :  integer  
+	  prototype\_id  :  integer  
+	  text         :  text  
   
-  1. Association with models  
-  		prototype has 4 models which are  
-  
-  		1. User model  
-  		2. Project model  
-  		3. Comment model  
-  		4. Image model
-  
-   The association between these models is that  
-  
-  		1. User has many Projects and Comments.  
-  		2. Project belongs to User and has many Comemnts and Images.  
-  		3. Comment belongs to Project and User.  
-  		4. Image belongs to Project.
-  
-  2. Table  
- 		Each model has each table, so have to create 4 tables.  
- 	
- 		1. Users    table  
- 		2. Projects table  
- 		3. Comments table  
- 		4. image    table
-  
-  
-  3. Columns in Tables and what types of culumns  
-  
-  		1. In Users table(using gem "devise" and gem "paperclip"),  
-  			name     :  string 
-  			group    :  string  
-  			profile  :  text
-  
-  		   In addtion to, the columns are related to gem "paperclip"  
-  
-  		2. In Projects table,  
-  			title       :  string
-  			catch_copy  :  string  
-  			concept     :  text  
-  			user_id     :  integer  
-  
-  		3. In Comments table,  
-  			user_id     :  integer  
-  			project_id  :  integer
-  			text        :  text  
-  
-  		4. In Image table,  
-  			project_id  :  integer  
-  			image       :  text  
-  
-  
+4. Image model
+	1. Association  
+	  Image belongs to Prototype.  
+	
+	2. Table  
+	  Images table
+	
+	3. Columns and types of columns  
+	  prototype\_id  :  integer
+	  content     :  text  
+
+	
+
