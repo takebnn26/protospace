@@ -15,7 +15,7 @@
 		name     :  string  
 		group    :  string  
 		profile  :  text  
-		work     :  string
+		works     :  string
 		
 	  
 2. Prototype model  
@@ -23,7 +23,7 @@
 	  belongs\_to :userser  
 	  has\_many   :comemnts  
 	  has\_many   :images  
-	  has\_many   :prototypes  
+	  has\_many   :likes, dependent: :destroy  
 	  
 	2. Table  
 	  Prototypes table
@@ -56,12 +56,13 @@
 	  
 	3. Columns and types of columns  
 	  prototype\_id  :  integer
-	  content     :  text  
+	  content        :  text  
+	  content\_type   :  integer
     
 5. Like model  
 	1. Association  
 	  belongs\_to :user  
-	  belongs\_to :prototype  
+	  belongs\_to :prototype, counter\_cache: :likes\_count  
 	  
 	2. Table  
 	  Likes table
