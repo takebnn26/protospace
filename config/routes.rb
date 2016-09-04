@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'prototypes#index'
+
+  get  '/prototypes/index'  =>    'prototypes#index'
+  get  '/prototypes/new'    =>    'prototypes#new'
+  get  '/prototypes/show'   =>    'prototypes#show'
 end
