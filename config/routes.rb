@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get  '/prototypes/index'  =>    'prototypes#index'
   get  '/prototypes/new'    =>    'prototypes#new'
   get  '/prototypes/show'   =>    'prototypes#show'
-  resources :user, only: [:edit]
+  resources :users, only: [:edit, :update]
 end
