@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def edit
-    current_user.id == params[:id]? ? @user = User.find(params[:id]) : redirect_to prototypes_index_path
+    (current_user.id == params[:id]).true? ? @user = User.find(params[:id]) : redirect_to prototypes_index_path
   end
 
   def update
