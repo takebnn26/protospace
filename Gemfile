@@ -6,7 +6,6 @@ gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'pry-rails'
 #haml適応
 gem 'haml-rails'
 gem 'erb2haml'
@@ -29,6 +28,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry-rails'
 end
 
 group :development do
