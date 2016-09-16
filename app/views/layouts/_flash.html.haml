@@ -1,4 +1,3 @@
 - flash.each do |alert_type, value|
-      - alert_type = "info" if key == "notice"
-      - alert_type = "danger" if key == "alert"
-      = content_tag :div, value, class: "alert alert-#{alert_type}"
+  - alert_type = key == 'notice' ? 'info' : 'danger'
+  = content_tag :div, value, class: "alert alert-#{alert_type}"
