@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def edit
-     redirect_to prototypes_index_path unless current_user.id == params[:id]
+     redirect_to prototypes_index_path unless current_user.id == params[:id].to_i
      @user = User.find(params[:id])
   end
 

@@ -20,8 +20,8 @@
 	  
 2. Prototype model  
 	1. Association  
-	  belongs\_to :userser  
-	  has\_many   :comemnts  
+	  belongs\_to :user  
+	  has\_many   :comments  
 	  has\_many   :images  
 	  has\_many   :likes, dependent: :destroy  
 	  
@@ -29,7 +29,7 @@
 	  Prototypes table
 	  
 	3. Columns and types of columns  
-	  title        :  string  
+	    title        :  string  
   	  catch\_copy  :  string  
   	  concept      :  text  
   	  user\_id     :  integer
@@ -56,7 +56,7 @@
 	  
 	3. Columns and types of columns  
 	  prototype\_id  :  integer
-	  content        :  text  
+	  content        :  string  
 	  content\_type   :  integer
     
 5. Like model  
