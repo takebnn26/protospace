@@ -4,7 +4,6 @@
 
 1. User model  
 	1. Association    
-	  has\_many  :projects  
 	  has\_many  :comments  
 	  has\_many  :prototypes   
 	   
