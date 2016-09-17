@@ -6,6 +6,7 @@ class PrototypesController < ApplicationController
     @prototype.images.build
   end
   def create
+    binding.pry
     @prototype = current_user.prototypes.new(proto_params)
     if @prototype.save
       redirect_to root_path, notice: 'You succeeded in posting'
